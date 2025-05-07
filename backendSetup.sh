@@ -20,13 +20,15 @@ cd ~/Geocitizen/
 echo "--- Updating pom.xml ---"
 sed -i \
   -e '/<repositories>/,/<\/repositories>/c\
-<repository>\
-    <id>central</id>\
-    <url>https://repo.maven.apache.org/maven2</url>\
-    <snapshots>\
-        <enabled>false</enabled>\
-    </snapshots>\
-</repository>' \
+<repositories>\
+        <repository>\
+            <id>central</id>\
+            <url>https://repo.maven.apache.org/maven2</url>\
+            <snapshots>\
+                <enabled>false</enabled>\
+            </snapshots>\
+        </repository>\
+<\/repositories>' \
   -e '/<distributionManagement>/,/<\/distributionManagement>/d' \
   -e 's/<artifactId>servlet-api<\/artifactId>/<artifactId>javax.servlet-api<\/artifactId>/' \
   -e 's/<springframework\.social\.facebook\.version>3\.0\.0\.M3<\/springframework\.social\.facebook\.version>/<springframework.social.facebook.version>2.0.3.RELEASE<\/springframework.social.facebook.version>/' \
