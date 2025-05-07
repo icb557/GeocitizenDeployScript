@@ -27,7 +27,7 @@ sed -i "s/host: 'localhost'/host: 'geocitizen.com'/" config/index.js
 sed -i "s|backEndUrl = 'http://localhost:8080/citizen/'|backEndUrl = 'http://geocitizen.com:8080/citizen/'|" src/main.js
 
 echo "--- Installing npm dependencies ---"
-npm install
+sudo npm install
 
 echo "=== Front-end setup completed successfully ==="
 echo "----------------------------------------------------------------------------------"
